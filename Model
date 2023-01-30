@@ -1,0 +1,217 @@
+name=c("anastasia","dima","katharine","james","emily","michael","mathhew","laura","kevin","jonas")
+
+score=c(12.5,9,16.5,12,9,20,14.5,13.5,8,19)
+
+attempts=c(1,3,2,3,2,3,1,1,2,1)
+
+qualify=c("yes","no","yes","no","no","yes","yes","no","no","yes")
+
+df=data.frame(name,score,attempts,qualify)
+
+df
+
+print(df[1:2,])
+
+print(df[c(3,5),c(1,3)])
+
+factor(df$attempts)
+
+table(df$attempts)
+
+avg<-(4*1)+(2*3)+(3*3)
+
+cat("avg of attempts:",avg/3,"\n")
+
+a<-c(1,2,3,4,5,6)
+
+a
+
+b<-matrix(1:10,nrow=3,ncol=3)
+
+b
+
+list1<-list(1:20)
+
+list1
+
+newlist<-list(a,b,list1)
+
+newlist
+
+print(newlist[[1]][1])
+
+print(newlist[[2]][1])
+
+i=1
+
+while (i < 11) {
+
+print("R Programming Lab")
+
+i=i+1
+
+}
+#A
+
+kelvin=as.integer(readline("enter the kelvin value:"))
+
+function kelvin_to_celsius(kelvin)
+
+celsius=kelvin-273.15
+
+print(celsius)
+
+#B
+
+i=1
+
+while (i < 11) {
+
+print("R Programming Lab")
+
+i=i+1
+
+}
+
+#C
+
+a=as.integer(readline("enter the end value"))
+
+Fibonacci <- numeric(10)
+
+Fibonacci[1] <- Fibonacci[2] <- 1
+
+for (i in 3:a) Fibonacci[i] <- Fibonacci[i - 2] + Fibonacci[i - 1]
+
+print(" Fibonacci numbers:")
+
+print(Fibonacci)
+
+#D
+
+lcm <- function(x, y) {
+
+if(x > y) {
+
+greater = x
+
+} else {
+
+greater = y
+
+}
+
+while(TRUE) {
+
+if((greater %% x == 0) && (greater %% y == 0)) {
+
+lcm = greater
+
+break
+
+}
+
+greater = greater + 1
+
+}
+
+return(lcm)
+
+}
+
+num1 = as.integer(readline(prompt = "Enter first number: "))
+
+num2 = as.integer(readline(prompt = "Enter second number: "))
+
+
+
+
+print(paste("The L.C.M. of", num1,"and", num2,"is", lcm(num1, num2)))
+
+#A
+
+vec<- c(21,62,10,53)
+
+labels <- c("london", "New york", "Singapore", "Mumbai")
+
+ 
+
+piepercent<- round(100 * vec / sum(vec), 1)
+
+pie(vec, labels = piepercent,
+
+    main = "City Pie-Chart", col = rainbow(length(vec)))
+
+legend("topright", c("london", "New york", "Singapore", "Mumbai"),cex = 1,fill = rainbow(length(vec)))
+
+#B
+
+a <- c(151,174,138,186,128,136,179,163,152,131)
+
+b <- c(63,81,56,91,47,57,76,72,62,48)
+
+relation <- lm(a~b)
+
+z <- data.frame(x = 170)
+
+result <-  predict(relation,z)
+
+print(result)
+
+#c
+
+hist(result, xlab = "regression",
+
+     col = "green", border = "black")
+     
+     
+     
+     #A
+
+vec<- c(21,62,10,53)
+
+labels <- c("london", "New york", "Singapore", "Mumbai")
+
+ 
+
+piepercent<- round(100 * vec / sum(vec), 1)
+
+pie(vec, labels = piepercent,
+
+    main = "City Pie-Chart", col = rainbow(length(vec)))
+
+legend("topright", c("london", "New york", "Singapore", "Mumbai"),cex = 1,fill = rainbow(length(vec)))
+
+#B
+
+a <- c(151,174,138,186,128,136,179,163,152,131)
+
+b <- c(63,81,56,91,47,57,76,72,62,48)
+
+relation <- lm(a~b)
+
+z <- data.frame(x = 170)
+
+result <-  predict(relation,z)
+
+print(result)
+
+#c
+
+hist(result, xlab = "regression",
+
+     col = "darkorange", border = "red")
+
+#D
+
+mtcars
+
+plot(mtcars$mpg,xlim=c(10,35), type = "o", col = "red",
+
+    xlab = "MORE TRENDS IN 70'S VEHICLES", ylab = "MPG",
+
+    main = "Article Written chart")
+
+#E
+
+summary(mtcars)
